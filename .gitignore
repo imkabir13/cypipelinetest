@@ -1,0 +1,6 @@
+cypress/videos
+cypress/downloads
+cypress/screenshots
+node_modules
+cypress.config.js
+cypress/downloads/downloads.html
