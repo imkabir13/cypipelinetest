@@ -6,9 +6,6 @@ phases:
     runtime-versions:
       nodejs: 12
     commands:
-      - npm install
-      - NODE_OPTIONS="--max-old-space-size=8192"
-      # Set COMMIT_INFO variables to send Git specifics to Cypress Cloud when recording
       # https://docs.cypress.io/guides/continuous-integration/introduction#Git-information
       - export COMMIT_INFO_BRANCH="$(git rev-parse HEAD | xargs git name-rev |
         cut -d' ' -f2 | sed 's/remotes\/origin\///g')"
