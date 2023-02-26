@@ -4,8 +4,9 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: latest
+      nodejs: 16.16.0
     commands:
+      - npm install
       # Set COMMIT_INFO variables to send Git specifics to Cypress Cloud when recording
       # https://docs.cypress.io/guides/continuous-integration/introduction#Git-information
       - export COMMIT_INFO_BRANCH="$(git rev-parse HEAD | xargs git name-rev |
@@ -18,7 +19,6 @@ phases:
       - npm ci
   pre_build:
     commands:
-      - npm install
       - npm run cy:verify
       - npm run cy:info
   build:
