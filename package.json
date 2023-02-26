@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:ci": "npx cypress run --record --key 1ec39585-7b5c-43f8-8230-e60f2c2e2a15"
+    "cy:verify": "cypress verify",
+    "cy:info": "cypress info",
+    "start:ci": "npx cypress run --record --key 1ec39585-7b5c-43f8-8230-e60f2c2e2a15"
   },
   "keywords": [],
   "author": "",
